@@ -40,6 +40,7 @@
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
         <lombok>1.18.20</lombok>
+        <knife4j>3.0.2</knife4j>
         <!-- override dependency version -->
         <tomcat.version>9.0.96</tomcat.version>
         <logback.version>1.2.13</logback.version>
@@ -198,6 +199,13 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok}</version>
+            </dependency>
+
+            <!-- knife4j -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j}</version>
             </dependency>
 
             <!-- 核心模块-->
