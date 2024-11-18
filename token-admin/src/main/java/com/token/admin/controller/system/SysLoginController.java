@@ -1,5 +1,6 @@
 package com.token.admin.controller.system;
 
+import com.token.common.annotation.Anonymous;
 import com.token.common.constant.Constants;
 import com.token.common.core.domain.AjaxResult;
 import com.token.common.core.domain.entity.SysMenu;
@@ -11,6 +12,8 @@ import com.token.framework.web.service.SysLoginService;
 import com.token.framework.web.service.SysPermissionService;
 import com.token.framework.web.service.TokenService;
 import com.token.system.service.SysMenuService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +29,7 @@ import java.util.Set;
  * @author token
  */
 @RestController
+@Api(tags = "登陆")
 public class SysLoginController
 {
     @Autowired
@@ -46,6 +50,7 @@ public class SysLoginController
      * @param loginBody 登录信息
      * @return 结果
      */
+    @ApiOperation(value = "登陆")
     @PostMapping("/login")
     public AjaxResult login(@RequestBody LoginBody loginBody)
     {
